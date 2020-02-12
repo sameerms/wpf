@@ -12,8 +12,8 @@ namespace WebApplication1.Models
     {
         private string connectionString;
         public ProductRepository(){
-
-            connectionString= @"Persist Security info=False;User ID=sa;password=123;Initial Catalog=Products;Data Source=DESKTOP-MLCKK3S\sam;Connection Timeout=100000;";
+            //DESKTOP-MLCKK3S\sam /W10X64INT0149
+            connectionString = @"Persist Security info=False;User ID=sa;password=123;Initial Catalog=Products;Data Source=DESKTOP-MLCKK3S\sam;Connection Timeout=100000;";
             }
 
         public IDbConnection Connection
@@ -48,9 +48,27 @@ namespace WebApplication1.Models
         {
             using (IDbConnection dbConnection = Connection)
             {
-                string sQuery = @"SELECT * FROM Produts where ProductId=@id";
+                string sQuery = @"SELECT * FROM Produts Where ProductId=@id";
                 dbConnection.Open();
                 return dbConnection.Query<Product>(sQuery, new { Id = id }).FirstOrDefault();
+            }
+        }
+        public void Delete(int id)
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                string sQuery = @"DELETE * FROM Produts Where ProductId=@id";
+                dbConnection.Open();
+                dbConnection.Execute(sQuery, new { Id = id });
+            }
+        }
+        public void Update(Product prod)
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                string sQuery = @"UPDATE Produts SET Name= @Name,Quantity=@Quantity,Price= @Price Where ProductId=@ProductId";
+                dbConnection.Open();
+                dbConnection.Execute(sQuery, prod);
             }
         }
     }      
