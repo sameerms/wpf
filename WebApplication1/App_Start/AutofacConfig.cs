@@ -10,6 +10,7 @@ using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 
+
 namespace WebApplication1.App_Start
 {
     public class AutofacConfig
