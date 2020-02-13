@@ -1,0 +1,11 @@
+﻿// This file is used by Code Analysis to maintain SuppressMessage
+// attributes that are applied to this project.
+// Project-level suppressions either have no target or are given
+// a specific target and scoped to a namespace, type, member, etc.
+
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Build", "CA1062:In externally visible method 'void ProductController.Put(int id, Product prod)', validate parameter 'prod' is non-null before using it. If appropriate, throw an ArgumentNullException when the argument is null or add a Code Contract precondition asserting non-null argument.", Justification = "<Pending>", Scope = "member", Target = "~M:WebApplication1.Controllers.ProductController.Put(System.Int32,WebApplication1.Models.Product)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Build", "CA1822:Member Application_Start does not access instance data and can be marked as static (Shared in VisualBasic)", Justification = "<Pending>", Scope = "member", Target = "~M:WebApplication1.WebApiApplication.Application_Start")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Build", "CA1707:Remove the underscores from member name WebApplication1.WebApiApplication.Application_Start().", Justification = "<Pending>", Scope = "member", Target = "~M:WebApplication1.WebApiApplication.Application_Start")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Build", "CA1062:In externally visible method 'void WebApiConfig.Register(HttpConfiguration config)', validate parameter 'config' is non-null before using it. If appropriate, throw an ArgumentNullException when the argument is null or add a Code Contract precondition asserting non-null argument.", Justification = "<Pending>", Scope = "member", Target = "~M:WebApplication1.WebApiConfig.Register(System.Web.Http.HttpConfiguration)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Build", "CA1707:Remove the underscores from namespace name 'WebApplication1.App_Start'.", Justification = "<Pending>", Scope = "namespace", Target = "~N:WebApplication1.App_Start")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Build", "CA1052:Type 'AutofacConfig' is a static holder type but is neither static nor NotInheritable", Justification = "<Pending>", Scope = "type", Target = "~T:WebApplication1.App_Start.AutofacConfig")]

@@ -13,9 +13,13 @@ using Autofac.Integration.WebApi;
 
 namespace WebApplication1.App_Start
 {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'AutofacConfig'
     public class AutofacConfig
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'AutofacConfig'
     {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'AutofacConfig.RegisterAutofac()'
         public static IContainer RegisterAutofac()
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'AutofacConfig.RegisterAutofac()'
         {
             var builder = new ContainerBuilder();
 

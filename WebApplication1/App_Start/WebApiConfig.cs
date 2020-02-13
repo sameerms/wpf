@@ -5,9 +5,13 @@ using System.Web.Http;
 
 namespace WebApplication1
 {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'WebApiConfig'
     public static class WebApiConfig
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'WebApiConfig'
     {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'WebApiConfig.Register(HttpConfiguration)'
         public static void Register(HttpConfiguration config)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'WebApiConfig.Register(HttpConfiguration)'
         {
             // Web API configuration and services
 
