@@ -17,8 +17,9 @@ namespace WebApplication1.Models
         public ProductRepository(){
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.ProductRepository()'
             //DESKTOP-MLCKK3S\sam /W10X64INT0149
-            connectionString = @"Persist Security info=False;User ID=sa;password=123;Initial Catalog=Products;Data Source=DESKTOP-MLCKK3S\sam;Connection Timeout=100000;";
-            }
+            connectionString = @"Persist Security info=False;Initial Catalog=Products;Data Source=W10X64INT0149;Connection Timeout=100000;";
+               
+        }
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.Connection'
         public IDbConnection Connection
