@@ -9,17 +9,13 @@ namespace WebApplication1
     /// Gets the answer
     ///</Summary>
     public static class WebApiConfig
-    ///<Summary>
-    /// Gets the answer
-    ///</Summary>
+  
     {
         ///<Summary>
         /// Gets the answer
         ///</Summary>
         public static void Register(HttpConfiguration config)
-        ///<Summary>
-        /// Gets the answer
-        ///</Summary>
+       
         {
             // Web API configuration and services
 
