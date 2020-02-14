@@ -8,32 +8,41 @@ using Dapper;
 
 namespace WebApplication1.Models
 {
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository'
+    ///<Summary>
+    /// Gets the answer
+    ///</Summary>
     public class ProductRepository
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository'
+    ///<Summary>
+    /// Gets the answer
+    ///</Summary>
     {
         private string connectionString;
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.ProductRepository()'
+        ///<Summary>
+        /// Gets the answer
+        ///</Summary>
         public ProductRepository(){
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.ProductRepository()'
+            ///<Summary>
+            /// Gets the answer
+            ///</Summary>
             //DESKTOP-MLCKK3S\sam /W10X64INT0149
-            connectionString = @"Persist Security info=False;Initial Catalog=Products;Data Source=W10X64INT0149;Connection Timeout=100000;";
-               
-        }
-
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.Connection'
+            connectionString = @"Persist Security info=False;User ID=sa;password=123;Initial Catalog=Products;Data Source=DESKTOP-MLCKK3S\sam;Connection Timeout=100000;";
+            }
+        ///<Summary>
+        /// Gets the answer
+        ///</Summary>
         public IDbConnection Connection
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.Connection'
         {
             get
             {
                 return new SqlConnection(connectionString);
             }
         }
+        ///<Summary>
+        /// Gets the answer
+        ///</Summary>
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.Add(Product)'
         public void Add(Product prod)
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.Add(Product)'
+
         {
             using (IDbConnection dbConnection = Connection)
             {
@@ -42,10 +51,11 @@ namespace WebApplication1.Models
                 dbConnection.Execute(sQuery, prod);
             }
         }
-
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.GetAll()'
+        ///<Summary>
+        /// Gets the answer
+        ///</Summary>
         public IEnumerable<Product> GetAll()
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.GetAll()'
+
         {
             using (IDbConnection dbConnection = Connection)
             {
@@ -55,9 +65,11 @@ namespace WebApplication1.Models
             }
         }
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.GetById(int)'
+        ///<Summary>
+        /// Gets the answer
+        ///</Summary>
         public Product GetById(int id)
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.GetById(int)'
+
         {
             using (IDbConnection dbConnection = Connection)
             {
@@ -66,9 +78,11 @@ namespace WebApplication1.Models
                 return dbConnection.Query<Product>(sQuery, new { Id = id }).FirstOrDefault();
             }
         }
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.Delete(int)'
+        ///<Summary>
+        /// Gets the answer
+        ///</Summary>
         public void Delete(int id)
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.Delete(int)'
+
         {
             using (IDbConnection dbConnection = Connection)
             {
@@ -77,9 +91,10 @@ namespace WebApplication1.Models
                 dbConnection.Execute(sQuery, new { Id = id });
             }
         }
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.Update(Product)'
+        ///<Summary>
+        /// Gets the answer
+        ///</Summary>
         public void Update(Product prod)
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'ProductRepository.Update(Product)'
         {
             using (IDbConnection dbConnection = Connection)
             {

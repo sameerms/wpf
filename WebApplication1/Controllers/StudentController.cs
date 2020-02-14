@@ -8,9 +8,15 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'StudentController'
+
+    ///<Summary>
+    /// Gets the answer
+    ///</Summary>
     public class StudentController : ApiController
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'StudentController'
+
+    ///<Summary>
+    /// Gets the answer
+    ///</Summary>
     {
 
         IList<Student> Students = new List<Student>()
@@ -35,16 +41,22 @@ namespace WebApplication1.Controllers
                     StudentId = 5, StudentName = "Manish Sharma"
                 },
         };
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'StudentController.GetAllStudents()'
-        public IList<Student> GetAllStudents()
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'StudentController.GetAllStudents()'
+
+        ///<Summary>
+        /// Gets the answer
+        ///</Summary>
+        [HttpGet]
+        public IList<Student> Get()
         {
             //Return list of all Students  
             return Students;
         }
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member 'StudentController.GetStudentDetails(int)'
-        public Student GetStudentDetails(int id)
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'StudentController.GetStudentDetails(int)'
+
+        ///<Summary>
+        /// Gets the answer
+        ///</Summary>
+        [HttpGet]
+        public Student Get(int id)
         {
             //Return a single Student detail  
             var Student = Students.FirstOrDefault(e => e.StudentId == id);

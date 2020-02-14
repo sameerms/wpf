@@ -1,4 +1,3 @@
-using NSwag.AspNet.Owin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,16 +15,8 @@ namespace WebApplication1
         protected void Application_Start()
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member 'WebApiApplication.Application_Start()'
         {
-            RouteTable.Routes.MapOwinPath("swagger", app =>
-            {
-                app.UseSwaggerUi3(typeof(WebApiApplication).Assembly, settings =>
-                {
-                    settings.MiddlewareBasePath = "/swagger";
-                    //settings.GeneratorSettings.DefaultUrlTemplate = "api/{controller}/{id}";  //this is the default one
-                    settings.GeneratorSettings.DefaultUrlTemplate = "api/{controller}/{action}/{id}";
-                });
-            });
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            
         }
     }
 }
