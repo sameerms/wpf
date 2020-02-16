@@ -26,7 +26,7 @@ namespace WebApplication1
                 {
                     settings.MiddlewareBasePath = "/swagger";
                     //settings.GeneratorSettings.DefaultUrlTemplate = "api/{controller}/{id}";  //this is the default one
-                    settings.GeneratorSettings.DefaultUrlTemplate = "api/{controller}/{action}/{id}";
+                    settings.GeneratorSettings.DefaultUrlTemplate = "api/{controller}/{id}";
                 });
             });
             GlobalConfiguration.Configure(WebApiConfig.Register);
